@@ -7,6 +7,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  *
@@ -24,7 +25,8 @@ public class Main {
                 Question q = new Question(Integer.parseInt(s[0]), s[1]);
                 questions.add(q);
             }
-            System.out.println(questions.get(0).toString());
+            Random rand = new Random();
+            System.out.println(questions.get(rand.nextInt(questions.size())).toString());
         }catch (IOException e) {
             e.printStackTrace();
         }
