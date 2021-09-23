@@ -4,6 +4,8 @@ package tarleton.lab6;
  *
  * @author Joseph Meier
  */
+
+//Class to contain question and id
 public class Question {
     private final String text;
     private final int id;
