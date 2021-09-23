@@ -52,6 +52,7 @@ public class Main {
                 answers.add(a);
             }
             answers.forEach(an -> {
+                System.out.println(questions.get(an.getId()-1).toString());
                 System.out.println(an.toString());
             });
         }catch (IOException e) {

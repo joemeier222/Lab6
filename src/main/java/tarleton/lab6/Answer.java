@@ -7,8 +7,8 @@ package tarleton.lab6;
 
 //Question to contain answer and id
 public class Answer {
-    private int id;
-    private String text;
+    private final int id;
+    private final String text;
 
     public Answer(int id, String text) {
         this.id = id;
