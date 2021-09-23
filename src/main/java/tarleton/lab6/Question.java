@@ -6,10 +6,10 @@ package tarleton.lab6;
  */
 public class Question {
     private String text;
+    private int id;
 
     @Override
     public String toString() {
-        return text;
+        return Integer.toString(id) + ": " + text;
     }
-   
 }
