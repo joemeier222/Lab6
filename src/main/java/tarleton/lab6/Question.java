@@ -12,6 +12,14 @@ public class Question {
         this.text = text;
         this.id = id;
     }
+
+    public String getText() {
+        return text;
+    }
+
+    public int getId() {
+        return id;
+    }
     
     @Override
     public String toString() {
