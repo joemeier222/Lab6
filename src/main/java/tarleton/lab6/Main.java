@@ -40,8 +40,20 @@ public class Main {
             Answer a = new Answer(questions.get(i).getId(),ans);
             try (PrintWriter out = new PrintWriter( new OutputStreamWriter(
                 new FileOutputStream("output.txt", true),"UTF-8"))) {
-            out.println(a.toString());
+            out.printf("%d %s%n",a.getId(), a.getText());
             };
+            
+            pc = Paths.get("output.txt");
+            lines = Files.readAllLines(pc, cs);
+            List<Answer> answers = new ArrayList<>();
+             for (String line : lines){
+                String[] s = line.split("\\s+");
+                a = new Answer(Integer.parseInt(s[0]), s[1]);
+                answers.add(a);
+            }
+            answers.forEach(an -> {
+                System.out.println(an.toString());
+            });
         }catch (IOException e) {
             e.printStackTrace();
         }

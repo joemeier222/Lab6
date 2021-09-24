@@ -15,6 +15,14 @@ public class Answer {
         this.text = text;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getText() {
+        return text;
+    }
+    
     @Override
     public String toString() {
         return Integer.toString(id) + ": " + text;
